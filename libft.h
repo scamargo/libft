@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:56:43 by scamargo          #+#    #+#             */
-/*   Updated: 2017/12/07 13:39:45 by scamargo         ###   ########.fr       */
+/*   Updated: 2017/12/08 13:56:21 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,10 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int				ft_sqrt(int num);
+int				ft_power(int num, int exp);
+void			ft_sort_integer_table(int *table, int size);
+int				ft_factorial(int nb);
+int				*ft_range(int min, int max);
 
 #endif

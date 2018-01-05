@@ -25,6 +25,13 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+typedef struct	s_array
+{
+	char	*str;
+	int		size;
+	int		used;
+}				t_array;
+
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -91,5 +98,6 @@ int				ft_factorial(int nb);
 int				*ft_range(int min, int max);
 char			**ft_init_chartable(size_t width, size_t height);
 void			ft_destroy_chartable(char **tab);
+void			arr_insert(t_array *arr, char c);
 
 #endif

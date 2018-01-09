@@ -6,11 +6,11 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 19:18:21 by scamargo          #+#    #+#             */
-/*   Updated: 2018/01/08 19:24:33 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/01/08 19:25:39 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char 	hex[] = "0123456789ABCDEF";
 

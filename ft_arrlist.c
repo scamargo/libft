@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:27:31 by scamargo          #+#    #+#             */
-/*   Updated: 2018/01/09 16:29:46 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/01/10 13:45:44 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,11 @@
 
 static void	resize_array(t_array *arr)
 {
-	int		index;
 	char	*new_str;
 
-	index = 0;
 	arr->size = arr->size * 2;
-	new_str = malloc(((arr->size) + 1) * sizeof(char));
-	while (arr->str[index])
-	{
-		new_str[index] = arr->str[index];
-		index++;
-	}
+	new_str = ft_memalloc(((arr->size) + 1) * sizeof(char));
+	ft_strcpy(new_str, arr->str);
 	free(arr->str);
 	arr->str[arr->used] = '\0';
 	arr->str = new_str;
@@ -45,7 +39,8 @@ t_array		*arr_init(int initial_size)
 			return (0);
 	buff->size = initial_size;
 	buff->used = 0;
-	if (!(buff->str = ft_memalloc(buff->size * sizeof(char))))
+	if (!(buff->str = ft_memalloc((buff->size + 1) * sizeof(char))))
 		return (0);
+	buff->str[initial_size] = '\0';
 	return (buff);
 }

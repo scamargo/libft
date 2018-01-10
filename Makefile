@@ -6,7 +6,7 @@
 #    By: scamargo <scamargo@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/30 21:11:57 by scamargo          #+#    #+#              #
-#    Updated: 2018/01/08 19:19:00 by scamargo         ###   ########.fr        #
+#    Updated: 2018/01/09 16:28:20 by scamargo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,14 +29,17 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc -Wextra -Wall -Werror -c $(SRCS) -I includes/
-	ar rc $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	#gcc -Wextra -Wall -Werror -c $(SRCS) -I includes/
+	ar rcs $(NAME) $(OBJS)
+
+%.o: %.c
+	gcc -Wextra -Wall -Werror -c $< -I includes/
 
 clean:
-	rm -f $(OBJS)
+	/bin/rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
 re: fclean all

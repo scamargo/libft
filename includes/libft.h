@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:56:43 by scamargo          #+#    #+#             */
-/*   Updated: 2018/01/08 19:22:41 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/01/09 15:54:10 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ int				*ft_range(int min, int max);
 char			**ft_init_chartable(size_t width, size_t height);
 void			ft_destroy_chartable(char **tab);
 void			arr_insert(t_array *arr, char c);
+t_array			*arr_init(int initial_size);
 char			*ft_itoa_base(int nbr, int base);
 
 

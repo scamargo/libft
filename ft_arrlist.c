@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:27:31 by scamargo          #+#    #+#             */
-/*   Updated: 2018/01/10 13:45:44 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/01/23 16:45:17 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_array		*arr_init(int initial_size)
 	t_array *buff;
 
 	if (!(buff = ft_memalloc(sizeof(t_array))))
-			return (0);
+		return (0);
 	buff->size = initial_size;
 	buff->used = 0;
 	if (!(buff->str = ft_memalloc((buff->size + 1) * sizeof(char))))

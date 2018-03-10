@@ -32,6 +32,16 @@ typedef struct	s_array
 	int		used;
 }				t_array;
 
+typedef struct	s_node {
+	void *content;
+	struct s_node *next;
+}		t_node;
+
+typedef struct	s_queue {
+	struct s_node *first;
+	struct s_node *last;
+}		t_queue;
+
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -102,5 +112,11 @@ void			ft_destroy_chartable(char **tab);
 void			arr_insert(t_array *arr, char c);
 t_array			*arr_init(int initial_size);
 char			*ft_itoa_base(int nbr, int base);
+
+void			ft_enqueue(t_queue *queue, void *content);
+void			*ft_dequeue(t_queue *queue);
+void			*ft_queue_peek(t_queue *queue);
+int			ft_is_queue_empty(t_queue *queue);
+t_queue			*ft_queue_init(void);
 
 #endif

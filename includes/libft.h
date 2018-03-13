@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:56:43 by scamargo          #+#    #+#             */
-/*   Updated: 2018/03/13 09:26:28 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/03/13 09:56:12 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ typedef struct	s_array
 }				t_array;
 
 typedef struct	s_node {
-	void *content;
-	struct s_node *next;
-}		t_node;
+	void			*content;
+	struct s_node	*next;
+}				t_node;
 
 typedef struct	s_queue {
 	struct s_node *first;
 	struct s_node *last;
-}		t_queue;
+}				t_queue;
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);

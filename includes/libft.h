@@ -6,7 +6,7 @@
 /*   By: scamargo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:56:43 by scamargo          #+#    #+#             */
-/*   Updated: 2018/03/13 09:56:12 by scamargo         ###   ########.fr       */
+/*   Updated: 2018/03/14 11:48:44 by scamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,8 +127,10 @@ int				ft_is_queue_empty(t_queue *queue);
 t_queue			*ft_queue_init(void);
 
 int				get_next_line(const int fd, char **line);
+int				ft_get_line(char **p_buffer, char **p_line);
 
 void			ft_strcatmulti(char *s1, char *s2, size_t times);
 void			ft_strupper(char *str);
+int				ft_stronlydigits(char *str);
 
 #endif
